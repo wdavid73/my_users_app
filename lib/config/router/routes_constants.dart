@@ -15,19 +15,12 @@ class RouteConstants {
   /// The path for the settings screen.
   static const String settingsScreen = '/settings';
 
-  /// The path for the onboarding screen
-  static const String onboardingScreen = '/onboarding';
+  /// The path for the register user screen.
+  static const String registerUserScreen = '/register_user';
 
-  // ----------- EXAMPLES ----------- //
-  /// The path for the example service screen.
-  static const String exampleService = '/example_service';
+  /// The path for the manage address screen,
+  static const String manageAddressScreen = '/manage_screen';
 
-  /// The path for the widgets screen.
-  static const String widgetsScreen = '/widgets';
-  static const String textStylesView = '/text_styles_view';
-  static const String inputsView = '/inputs_view';
-  static const String selectableWidgetView = '/selectable_widget_view';
-  static const String drawerView = '/drawer_view';
-  static const String buttonsView = '/buttons_view';
-  static const String bottomSheetView = '/bottom_sheet_view';
+  /// The path for the summary or profile screen.
+  static const String summaryProfile = '/summary';
 }

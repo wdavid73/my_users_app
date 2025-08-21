@@ -20,6 +20,34 @@ class AppRoutes {
   ///   - A [List] of [RouteBase] objects representing the application's routes.
   static List<RouteBase> getAppRoutes() {
     return [
+      ///* USER SCREENS
+      GoRoute(
+        path: RouteConstants.registerUserScreen,
+        name: "register_user",
+        pageBuilder: (_, __) => _transitionPage(
+          child: const RegisterUserScreen(),
+          transitionType: TransitionType.slideLeft,
+        ),
+      ),
+
+      GoRoute(
+        path: RouteConstants.manageAddressScreen,
+        name: "manage_address",
+        pageBuilder: (_, __) => _transitionPage(
+          child: const ManageAddressScreen(),
+          transitionType: TransitionType.slideLeft,
+        ),
+      ),
+
+      GoRoute(
+        path: RouteConstants.summaryProfile,
+        name: "summary",
+        pageBuilder: (_, __) => _transitionPage(
+          child: const SummaryScreen(),
+          transitionType: TransitionType.slideLeft,
+        ),
+      ),
+
       ///* SPLASH SCREEN
       GoRoute(
         path: RouteConstants.splash,
@@ -42,16 +70,6 @@ class AppRoutes {
         pageBuilder: (_, __) => _transitionPage(
           child: const SettingsScreen(),
           transitionType: TransitionType.slideRight,
-        ),
-      ),
-
-      /// ONBOARDING ROUTE
-      GoRoute(
-        path: RouteConstants.onboardingScreen,
-        name: "onboarding",
-        pageBuilder: (_, __) => _transitionPage(
-          child: const OnBoardingScreen(),
-          transitionType: TransitionType.fade,
         ),
       ),
 

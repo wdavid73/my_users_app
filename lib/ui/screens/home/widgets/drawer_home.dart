@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter_kit/config/config.dart';
 import 'package:flutter_starter_kit/ui/blocs/blocs.dart';
 import 'package:flutter_starter_kit/ui/shared/shared.dart';
-import 'package:go_router/go_router.dart';
 
 class DrawerHome extends StatelessWidget {
   const DrawerHome({super.key});
@@ -38,24 +37,7 @@ class _DrawerBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.max,
-      children: [
-        _DrawerItem(
-          icon: Icons.widgets,
-          text: "widgets",
-          onTap: () {
-            context.push(RouteConstants.widgetsScreen);
-            Navigator.pop(context);
-          },
-        ),
-        _DrawerItem(
-          icon: Icons.api,
-          text: "example api service implementation",
-          onTap: () {
-            context.push(RouteConstants.exampleService);
-            Navigator.pop(context);
-          },
-        ),
-      ],
+      children: [],
     );
   }
 }

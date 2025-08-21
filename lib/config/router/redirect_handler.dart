@@ -87,15 +87,10 @@ String? _handleAuthenticatedRedirect(String currentPath) {
 String? appRedirect(
   GoRouterNotifier goRouterNotifier,
   GoRouterState state,
-  bool isOnboardingCompleted,
 ) {
   final currentPath = state.uri.path;
   final authStatus = goRouterNotifier.authStatus;
 
-  if (isOnboardingCompleted) {
-    final handler = redirectHandlers[authStatus];
-    return handler?.call(currentPath);
-  }
-
-  return null;
+  final handler = redirectHandlers[authStatus];
+  return handler?.call(currentPath);
 }

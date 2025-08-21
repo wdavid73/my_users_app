@@ -53,10 +53,6 @@ flutter:
   generate: true
 
   assets:
-    # Flavors Environments
-    - flavors/.env.dev
-    - flavors/.env.staging
-    - flavors/.env.prod
     # Assets
     - assets/app-icon/
     - assets/loaders/

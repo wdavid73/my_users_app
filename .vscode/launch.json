@@ -9,15 +9,13 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "lib/main.dart",
-      "args": ["--flavor", "dev"]
+      "program": "lib/main.dart"
     },
     {
       "name": "Flutter Staging Flavor",
       "type": "dart",
       "request": "launch",
       "program": "lib/flavors/main_staging.dart",
-      "args": ["--flavor", "staging"],
       "flutterMode": "debug"
     },
     {
@@ -25,7 +23,6 @@
       "type": "dart",
       "request": "launch",
       "program": "lib/flavors/main_prod.dart",
-      "args": ["--flavor", "prod"],
       "flutterMode": "release"
     }
   ]
