@@ -44,8 +44,8 @@ class _CompactLayout extends StatelessWidget {
             ),
           ),
           const Gap(10),
-          _UserCard(),
-          _AddressLIst(),
+          UserCard(),
+          AddressList(),
           const Gap(16),
         ],
       ),
@@ -77,11 +77,11 @@ class _MediumLayout extends StatelessWidget {
                 ),
               ),
               const Gap(10),
-              _UserCard(),
+              UserCard(),
             ],
           ),
           const Gap(16),
-          _AddressLIst(),
+          AddressList(),
           const Gap(16),
         ],
       ),
@@ -117,8 +117,8 @@ class _BodyContainer extends StatelessWidget {
   }
 }
 
-class _AddressLIst extends StatelessWidget {
-  const _AddressLIst();
+class AddressList extends StatelessWidget {
+  const AddressList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -149,8 +149,8 @@ class _AddressLIst extends StatelessWidget {
   }
 }
 
-class _UserCard extends StatelessWidget {
-  const _UserCard();
+class UserCard extends StatelessWidget {
+  const UserCard({super.key});
 
   @override
   Widget build(BuildContext context) {

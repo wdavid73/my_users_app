@@ -979,6 +979,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Full name'**
   String get fullName;
+
+  /// No description provided for @registerUserHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Register user here'**
+  String get registerUserHere;
 }
 
 class _AppLocalizationsDelegate

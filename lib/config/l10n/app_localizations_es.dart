@@ -489,4 +489,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get fullName => 'Nombre completo';
+
+  @override
+  String get registerUserHere => 'Registra un usuario aqui';
 }

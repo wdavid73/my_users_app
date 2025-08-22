@@ -43,6 +43,8 @@ class CustomDatePickerField extends StatefulWidget {
 
   final void Function(DateTime)? onChanged;
 
+  final Key? textFormFieldKey;
+
   const CustomDatePickerField({
     super.key,
     required this.hintText,
@@ -58,6 +60,7 @@ class CustomDatePickerField extends StatefulWidget {
     this.lastDate,
     this.initialDate,
     this.onChanged,
+    this.textFormFieldKey,
   });
 
   @override
@@ -110,6 +113,7 @@ class _CustomDatePickerFieldState extends State<CustomDatePickerField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      key: widget.textFormFieldKey,
       controller: _internalController,
       readOnly: true,
       onTap: _onTapDate,

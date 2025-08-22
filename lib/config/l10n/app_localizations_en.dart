@@ -478,4 +478,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fullName => 'Full name';
+
+  @override
+  String get registerUserHere => 'Register user here';
 }

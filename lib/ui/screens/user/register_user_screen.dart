@@ -87,6 +87,7 @@ class _FormContainer extends StatelessWidget {
               _FormHeader(),
               const Gap(16),
               CustomTextFormField(
+                textFormFieldKey: Key("first_name_field"),
                 label: context.l10n.name,
                 hint: context.l10n.name,
                 onChanged: cubit.firstNameChanged,
@@ -95,6 +96,7 @@ class _FormContainer extends StatelessWidget {
               ),
               const Gap(10),
               CustomTextFormField(
+                textFormFieldKey: Key("last_name_field"),
                 label: context.l10n.lastName,
                 hint: context.l10n.lastName,
                 onChanged: cubit.lastNameChanged,
@@ -103,6 +105,7 @@ class _FormContainer extends StatelessWidget {
               ),
               const Gap(10),
               CustomDatePickerField(
+                textFormFieldKey: Key("date_birth_field"),
                 hintText: context.l10n.dateBirth,
                 errorMessage: state.dateBirth.errorMessage,
                 onChanged: cubit.dateBirthChanged,
@@ -112,6 +115,7 @@ class _FormContainer extends StatelessWidget {
               SizedBox(
                 width: context.width,
                 child: CustomButton(
+                  buttonKey: const Key("continue_button"),
                   onPressed: () {
                     bool isValid = cubit.onSubmit();
                     if (isValid) _continue(context);
@@ -139,7 +143,7 @@ class _FormHeader extends StatelessWidget {
         Icon(FluentIcons.person_16_filled),
         const Gap(4),
         Text(
-          context.l10n.registerUser,
+          context.l10n.registerUserHere,
           style: context.textTheme.titleMedium,
         ),
       ],

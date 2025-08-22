@@ -297,5 +297,7 @@
   "userInformation": "User information",
   "@userInformation": {},
   "fullName": "Full name",
-  "@fullName": {}
+  "@fullName": {},
+  "registerUserHere": "Register user here",
+  "@registerUserHere": {}
 }

@@ -154,5 +154,6 @@
   "address": "Dirección",
   "summary": "Resumen",
   "userInformation": "Información del usuario",
-  "fullName": "Nombre completo"
+  "fullName": "Nombre completo",
+  "registerUserHere": "Registra un usuario aqui"
 }

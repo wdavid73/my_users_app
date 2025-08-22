@@ -70,7 +70,7 @@ class _BodyState extends State<_Body> {
     final cubit = context.read<ManageAddressCubit>();
     return Column(
       children: [
-        Expanded(child: AddressList()),
+        Expanded(child: ManageAddressList()),
         const Gap(10),
         Container(
           constraints: BoxConstraints(
@@ -101,6 +101,7 @@ class _BodyState extends State<_Body> {
             maxWidth: 350,
           ),
           child: CustomButton(
+            buttonKey: const Key("continue_button"),
             onPressed: () {
               bool isValid = cubit.saveAddress();
               if (isValid == true) {
@@ -137,6 +138,7 @@ class _InputRegisterAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<ManageAddressCubit>();
     return CustomTextFormField(
+      textFormFieldKey: Key("new_address_field"),
       label: context.l10n.newAddress,
       hint: context.l10n.newAddress,
       controller: controller,
@@ -167,8 +169,8 @@ class _WrapperProviders extends StatelessWidget {
   }
 }
 
-class AddressList extends StatelessWidget {
-  const AddressList({
+class ManageAddressList extends StatelessWidget {
+  const ManageAddressList({
     super.key,
   });
 
@@ -196,6 +198,7 @@ class AddressList extends StatelessWidget {
             child: ListTile(
               title: Text("${context.l10n.address}: ${addressModel.name}"),
               trailing: CustomButton(
+                buttonKey: Key("remove_address_button_$index"),
                 onPressed: () => cubit.removeAddress(index),
                 buttonType: CustomButtonType.icon,
                 icon: Icon(
