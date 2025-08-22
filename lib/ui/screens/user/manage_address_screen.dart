@@ -22,6 +22,7 @@ class ManageAddressScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Manage Address"),
       ),
+      scaffoldBackgroundColor: ColorTheme.secondaryColor,
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -71,27 +72,34 @@ class _BodyState extends State<_Body> {
       children: [
         Expanded(child: AddressList()),
         const Gap(10),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Text(context.l10n.inputAddress),
-                const Gap(10),
-                _InputRegisterAddress(
-                  controller: _controller,
-                ),
-                const Gap(10),
-              ],
+        Container(
+          constraints: BoxConstraints(
+            maxWidth: 350,
+          ),
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text(context.l10n.inputAddress),
+                  const Gap(10),
+                  _InputRegisterAddress(
+                    controller: _controller,
+                  ),
+                  const Gap(10),
+                ],
+              ),
             ),
           ),
         ),
         const Gap(10),
-        SizedBox(
-          width: context.width,
+        Container(
+          constraints: BoxConstraints(
+            maxWidth: 350,
+          ),
           child: CustomButton(
             onPressed: () {
               bool isValid = cubit.saveAddress();

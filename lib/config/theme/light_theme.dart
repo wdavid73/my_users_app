@@ -70,7 +70,7 @@ class LightTheme {
       floatingActionButtonTheme: _baseFABTheme,
       iconButtonTheme: getBaseIconButtonTheme(
         iconColorResolver: _resolveColorStatusWith,
-        iconSize: context.dp(3),
+        iconSize: context.dp(1.8),
       ),
       drawerTheme: _baseDrawerTheme,
       listTileTheme: _baseListTileTheme,

@@ -16,39 +16,102 @@ class SummaryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(context.l10n.summary),
       ),
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              ColorTheme.secondaryColor,
-              Color(0xffaa44fd),
-            ],
-            stops: [0.25, 0.75],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+      scaffoldBackgroundColor: ColorTheme.secondaryColor,
+      expandedLayout: _MediumLayout(),
+      mediumLayout: _MediumLayout(),
+      child: _CompactLayout(),
+    );
+  }
+}
+
+class _CompactLayout extends StatelessWidget {
+  const _CompactLayout();
+
+  @override
+  Widget build(BuildContext context) {
+    return _BodyContainer(
+      child: ListView(
+        children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: CircleAvatar(
+              radius: context.dp(12),
+              child: Icon(
+                FluentIcons.person_28_filled,
+                color: Colors.white,
+                size: context.dp(16),
+              ),
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          const Gap(10),
+          _UserCard(),
+          _AddressLIst(),
+          const Gap(16),
+        ],
+      ),
+    );
+  }
+}
+
+class _MediumLayout extends StatelessWidget {
+  const _MediumLayout();
+
+  @override
+  Widget build(BuildContext context) {
+    return _BodyContainer(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               CircleAvatar(
-                radius: context.dp(12),
+                radius: context.dp(6),
                 child: Icon(
                   FluentIcons.person_28_filled,
                   color: Colors.white,
-                  size: context.dp(16),
+                  size: context.dp(8),
                 ),
               ),
               const Gap(10),
               _UserCard(),
-              _AddressLIst(),
-              const Gap(16),
             ],
           ),
+          const Gap(16),
+          _AddressLIst(),
+          const Gap(16),
+        ],
+      ),
+    );
+  }
+}
+
+class _BodyContainer extends StatelessWidget {
+  final Widget child;
+  const _BodyContainer({
+    required this.child,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            ColorTheme.secondaryColor,
+            Color(0xffaa44fd),
+          ],
+          stops: [0.25, 0.75],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: child,
       ),
     );
   }
@@ -92,27 +155,32 @@ class _UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = getIt.get<UserBloc>().state.user;
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              context.l10n.userInformation,
-              style: context.textTheme.titleMedium,
-            ),
-            const Gap(10),
-            Text(
-              "${context.l10n.fullName}: ${user?.fullName}",
-              style: context.textTheme.titleSmall,
-            ),
-            Text(
-              "${context.l10n.dateBirth}: ${DateFormat(DateFormat.YEAR_MONTH_DAY).format(user!.dateBirth)}",
-              style: context.textTheme.titleSmall,
-            ),
-          ],
+    return Container(
+      constraints: BoxConstraints(
+        maxWidth: context.wp(60),
+      ),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                context.l10n.userInformation,
+                style: context.textTheme.titleMedium,
+              ),
+              const Gap(10),
+              Text(
+                "${context.l10n.fullName}: ${user?.fullName}",
+                style: context.textTheme.titleSmall,
+              ),
+              Text(
+                "${context.l10n.dateBirth}: ${DateFormat(DateFormat.YEAR_MONTH_DAY).format(user!.dateBirth)}",
+                style: context.textTheme.titleSmall,
+              ),
+            ],
+          ),
         ),
       ),
     );

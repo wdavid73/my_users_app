@@ -20,6 +20,7 @@ class RegisterUserScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      scaffoldBackgroundColor: ColorTheme.secondaryColor,
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -72,51 +73,54 @@ class _FormContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<RegisterUserCubit>();
     final state = context.watch<RegisterUserCubit>().state;
-    return Card(
-      elevation: 4.0,
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _FormHeader(),
-            const Gap(16),
-            CustomTextFormField(
-              label: context.l10n.name,
-              hint: context.l10n.name,
-              onChanged: cubit.firstNameChanged,
-              errorMessage: state.firstName.errorMessage,
-              initialValue: state.firstName.value,
-            ),
-            const Gap(10),
-            CustomTextFormField(
-              label: context.l10n.lastName,
-              hint: context.l10n.lastName,
-              onChanged: cubit.lastNameChanged,
-              errorMessage: state.lastName.errorMessage,
-              initialValue: state.lastName.value,
-            ),
-            const Gap(10),
-            CustomDatePickerField(
-              hintText: context.l10n.dateBirth,
-              errorMessage: state.dateBirth.errorMessage,
-              onChanged: cubit.dateBirthChanged,
-              firstDate: DateTime(1990, 1, 1),
-            ),
-            const Gap(10),
-            SizedBox(
-              width: context.width,
-              child: CustomButton(
-                onPressed: () {
-                  bool isValid = cubit.onSubmit();
-                  if (isValid) _continue(context);
-                },
-                label: context.l10n.continueBtn,
+    return Container(
+      constraints: BoxConstraints(maxWidth: 350),
+      child: Card(
+        elevation: 4.0,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _FormHeader(),
+              const Gap(16),
+              CustomTextFormField(
+                label: context.l10n.name,
+                hint: context.l10n.name,
+                onChanged: cubit.firstNameChanged,
+                errorMessage: state.firstName.errorMessage,
+                initialValue: state.firstName.value,
               ),
-            )
-          ],
+              const Gap(10),
+              CustomTextFormField(
+                label: context.l10n.lastName,
+                hint: context.l10n.lastName,
+                onChanged: cubit.lastNameChanged,
+                errorMessage: state.lastName.errorMessage,
+                initialValue: state.lastName.value,
+              ),
+              const Gap(10),
+              CustomDatePickerField(
+                hintText: context.l10n.dateBirth,
+                errorMessage: state.dateBirth.errorMessage,
+                onChanged: cubit.dateBirthChanged,
+                firstDate: DateTime(1990, 1, 1),
+              ),
+              const Gap(10),
+              SizedBox(
+                width: context.width,
+                child: CustomButton(
+                  onPressed: () {
+                    bool isValid = cubit.onSubmit();
+                    if (isValid) _continue(context);
+                  },
+                  label: context.l10n.continueBtn,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
