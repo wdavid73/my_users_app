@@ -35,7 +35,7 @@ class AppRoutes {
         name: "manage_address",
         pageBuilder: (_, __) => _transitionPage(
           child: const ManageAddressScreen(),
-          transitionType: TransitionType.slideLeft,
+          transitionType: TransitionType.slideRight,
         ),
       ),
 
@@ -44,7 +44,7 @@ class AppRoutes {
         name: "summary",
         pageBuilder: (_, __) => _transitionPage(
           child: const SummaryScreen(),
-          transitionType: TransitionType.slideLeft,
+          transitionType: TransitionType.slideRight,
         ),
       ),
 

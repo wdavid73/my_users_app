@@ -901,6 +901,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Try again'**
   String get tryAgain;
+
+  /// No description provided for @registerUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Register User'**
+  String get registerUser;
+
+  /// No description provided for @lastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get lastName;
+
+  /// No description provided for @dateBirth.
+  ///
+  /// In en, this message translates to:
+  /// **'Date birth'**
+  String get dateBirth;
+
+  /// No description provided for @continueBtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueBtn;
+
+  /// No description provided for @manageAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage address'**
+  String get manageAddress;
+
+  /// No description provided for @inputAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Input a Address'**
+  String get inputAddress;
+
+  /// No description provided for @registerAlmostOneAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter at least one address'**
+  String get registerAlmostOneAddress;
+
+  /// No description provided for @newAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'New address'**
+  String get newAddress;
+
+  /// No description provided for @addressListEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'You do not have any addresses registered yet.'**
+  String get addressListEmpty;
+
+  /// No description provided for @address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
+  /// No description provided for @userInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'User information'**
+  String get userInformation;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullName;
 }
 
 class _AppLocalizationsDelegate

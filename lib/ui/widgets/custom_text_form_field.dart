@@ -106,6 +106,8 @@ class CustomTextFormField extends StatelessWidget {
         autofillHints: autofillHints,
         initialValue: initialValue,
         decoration: InputDecoration(
+          fillColor: Colors.white,
+          filled: true,
           labelText: label,
           hintText: hint,
           errorText: errorMessage != '' ? errorMessage : null,

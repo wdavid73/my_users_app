@@ -41,6 +41,8 @@ class CustomDatePickerField extends StatefulWidget {
   /// The last date to display in the date picker.
   final DateTime? lastDate;
 
+  final void Function(DateTime)? onChanged;
+
   const CustomDatePickerField({
     super.key,
     required this.hintText,
@@ -55,6 +57,7 @@ class CustomDatePickerField extends StatefulWidget {
     this.firstDate,
     this.lastDate,
     this.initialDate,
+    this.onChanged,
   });
 
   @override
@@ -101,6 +104,7 @@ class _CustomDatePickerFieldState extends State<CustomDatePickerField> {
       initialEntryMode: widget.initialEntryMode,
     );
     _updateControllerText(picked);
+    if (widget.onChanged != null) widget.onChanged!(picked!);
   }
 
   @override

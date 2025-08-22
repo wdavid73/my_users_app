@@ -153,10 +153,7 @@ class ThemeConstants {
     centerTitle: false,
     elevation: 0,
     titleTextStyle: baseTextTheme.titleMedium?.copyWith(
-      color: ColorTheme.textPrimary,
-    ),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16),
+      color: ColorTheme.white,
     ),
   );
 
@@ -204,7 +201,7 @@ class ThemeConstants {
   /// light and dark themes. It defines default text styles for title and
   /// subtitle, text color, and colors for selected states and icons.
   static final baseListTileTheme = ListTileThemeData(
-    titleTextStyle: baseTextTheme.bodyLarge,
+    titleTextStyle: baseTextTheme.bodyMedium,
     subtitleTextStyle: baseTextTheme.bodySmall,
     textColor: ColorTheme.textPrimary,
     selectedTileColor: ColorTheme.accentColor,
@@ -221,10 +218,6 @@ class ThemeConstants {
     elevation: 0,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
-      side: BorderSide(
-        color: ColorTheme.textPrimary,
-        width: 2,
-      ),
     ),
   );
 

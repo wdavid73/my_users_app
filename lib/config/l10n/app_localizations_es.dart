@@ -449,4 +449,44 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tryAgain => 'Try again';
+
+  @override
+  String get registerUser => 'Registrar Usuario';
+
+  @override
+  String get lastName => 'Apellido';
+
+  @override
+  String get dateBirth => 'Fecha de nacimiento';
+
+  @override
+  String get continueBtn => 'Continuar';
+
+  @override
+  String get manageAddress => 'Administrar Direcciones';
+
+  @override
+  String get inputAddress => 'Ingresa una dirección';
+
+  @override
+  String get registerAlmostOneAddress =>
+      'Por favor ingresa al menos una dirección';
+
+  @override
+  String get newAddress => 'Nueva dirección';
+
+  @override
+  String get addressListEmpty => 'No tienes direcciones registradas aun.';
+
+  @override
+  String get address => 'Dirección';
+
+  @override
+  String get summary => 'Resumen';
+
+  @override
+  String get userInformation => 'Información del usuario';
+
+  @override
+  String get fullName => 'Nombre completo';
 }

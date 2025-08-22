@@ -107,7 +107,7 @@ IconButtonThemeData getBaseIconButtonTheme({
     style: ButtonStyle(
       iconSize: WidgetStatePropertyAll<double>(iconSize),
       iconColor: iconColorResolver(
-        ColorTheme.secondaryColor,
+        ColorTheme.white,
         ColorTheme.disable,
       ),
     ),

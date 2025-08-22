@@ -42,7 +42,7 @@ class LightTheme {
       ),
       textTheme: baseTextTheme.apply(fontSizeFactor: textScaleFactor),
       appBarTheme: _baseAppBarTheme.copyWith(
-        backgroundColor: ColorTheme.white,
+        backgroundColor: ColorTheme.secondaryColor,
         surfaceTintColor: ColorTheme.primaryColor,
         iconTheme: baseIconTheme.copyWith(
           color: ColorTheme.secondaryColor,

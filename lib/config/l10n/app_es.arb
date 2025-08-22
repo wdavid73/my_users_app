@@ -141,5 +141,18 @@
   "@about": {},
   "version": "Versión",
   "@version": {},
-  "tryAgain": "Try again"
+  "tryAgain": "Try again",
+  "registerUser": "Registrar Usuario",
+  "lastName": "Apellido",
+  "dateBirth": "Fecha de nacimiento",
+  "continueBtn": "Continuar",
+  "manageAddress": "Administrar Direcciones",
+  "inputAddress": "Ingresa una dirección",
+  "registerAlmostOneAddress": "Por favor ingresa al menos una dirección",
+  "newAddress": "Nueva dirección",
+  "addressListEmpty": "No tienes direcciones registradas aun.",
+  "address": "Dirección",
+  "summary": "Resumen",
+  "userInformation": "Información del usuario",
+  "fullName": "Nombre completo"
 }

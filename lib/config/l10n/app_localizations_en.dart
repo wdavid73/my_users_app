@@ -438,4 +438,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tryAgain => 'Try again';
+
+  @override
+  String get registerUser => 'Register User';
+
+  @override
+  String get lastName => 'Last name';
+
+  @override
+  String get dateBirth => 'Date birth';
+
+  @override
+  String get continueBtn => 'Continue';
+
+  @override
+  String get manageAddress => 'Manage address';
+
+  @override
+  String get inputAddress => 'Input a Address';
+
+  @override
+  String get registerAlmostOneAddress => 'Please enter at least one address';
+
+  @override
+  String get newAddress => 'New address';
+
+  @override
+  String get addressListEmpty =>
+      'You do not have any addresses registered yet.';
+
+  @override
+  String get address => 'Address';
+
+  @override
+  String get summary => 'Summary';
+
+  @override
+  String get userInformation => 'User information';
+
+  @override
+  String get fullName => 'Full name';
 }

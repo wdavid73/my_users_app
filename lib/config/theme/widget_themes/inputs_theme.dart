@@ -3,10 +3,7 @@ import 'package:flutter_starter_kit/config/theme/theme.dart';
 
 import 'text_theme.dart';
 
-final _baseBorderSideInput = BorderSide(
-  color: ColorTheme.backgroundColorDark,
-  width: 1.5,
-);
+final _baseBorderSideInput = BorderSide();
 final _baseOutlineInputBorder = OutlineInputBorder(
   borderSide: _baseBorderSideInput,
   borderRadius: BorderRadius.circular(12),

@@ -32,16 +32,14 @@ class AppDependencyInjection {
     // Singleton
     getIt.registerLazySingleton<ThemeModeCubit>(() => ThemeModeCubit());
 
-    getIt.registerLazySingleton<IntroductionCubit>(
-      () => IntroductionCubit(getIt.get<KeyValueStorageService>()),
-    );
-
     getIt.registerLazySingleton<AuthBloc>(
       () => AuthBloc(
         getIt<AuthUseCase>(),
         getIt<KeyValueStorageService>(),
       ),
     );
+
+    getIt.registerLazySingleton<UserBloc>(() => UserBloc());
 
     // Factory
 
@@ -56,5 +54,13 @@ class AppDependencyInjection {
         authBloc: getIt<AuthBloc>(),
       ),
     );
+
+    getIt.registerFactory<RegisterUserCubit>(() => RegisterUserCubit(
+          getIt.get<UserBloc>(),
+        ));
+
+    getIt.registerFactory<ManageAddressCubit>(() => ManageAddressCubit(
+          getIt.get<UserBloc>(),
+        ));
   }
 }
