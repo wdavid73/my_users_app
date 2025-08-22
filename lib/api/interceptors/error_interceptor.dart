@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_starter_kit/api/api.dart';
+import 'package:my_users_app/api/api.dart';
 
 /// Interceptor for handling API errors.
 ///

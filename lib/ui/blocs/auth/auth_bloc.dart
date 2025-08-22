@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter_kit/data/data.dart';
-import 'package:flutter_starter_kit/domain/usecases/auth_usecase.dart';
-import 'package:flutter_starter_kit/ui/shared/service/service.dart';
+import 'package:my_users_app/data/data.dart';
+import 'package:my_users_app/domain/usecases/auth_usecase.dart';
+import 'package:my_users_app/ui/shared/service/service.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

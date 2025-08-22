@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_starter_kit/config/l10n/app_localizations.dart';
-import 'package:flutter_starter_kit/data/models/address_model.dart';
-import 'package:flutter_starter_kit/ui/cubits/cubits.dart';
-import 'package:flutter_starter_kit/ui/screens/user/manage_address_screen.dart';
+import 'package:my_users_app/config/l10n/app_localizations.dart';
+import 'package:my_users_app/data/models/address_model.dart';
+import 'package:my_users_app/ui/cubits/cubits.dart';
+import 'package:my_users_app/ui/screens/user/manage_address_screen.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';

@@ -1,6 +1,6 @@
-import 'package:flutter_starter_kit/api/api.dart';
-import 'package:flutter_starter_kit/domain/datasources/auth_datasource.dart';
-import 'package:flutter_starter_kit/domain/repositories/auth_repository.dart';
+import 'package:my_users_app/api/api.dart';
+import 'package:my_users_app/domain/datasources/auth_datasource.dart';
+import 'package:my_users_app/domain/repositories/auth_repository.dart';
 
 /// Implementation of [AuthRepository] that interacts with an authentication data source.
 ///

@@ -1,4 +1,4 @@
-package com.guichodevs.flutterstaterkit
+package com.wpadilla.my_users_app.
 
 import io.flutter.embedding.android.FlutterActivity
 

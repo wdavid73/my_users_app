@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/config/config.dart';
+import 'package:my_users_app/config/config.dart';
 
 class AppTypography {
   // Font Family

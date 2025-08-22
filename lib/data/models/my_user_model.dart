@@ -1,4 +1,4 @@
-import 'package:flutter_starter_kit/domain/entities/my_user.dart';
+import 'package:my_users_app/domain/entities/my_user.dart';
 
 class MyUserModel extends MyUser {
   const MyUserModel({
@@ -9,10 +9,10 @@ class MyUserModel extends MyUser {
 
   factory MyUserModel.fromJson(Map<String, dynamic> json) {
     // Handle both DateTime and String date formats
-    final dateBirth = json["date_birth"] is DateTime 
+    final dateBirth = json["date_birth"] is DateTime
         ? json["date_birth"] as DateTime
         : DateTime.parse(json["date_birth"] as String);
-        
+
     return MyUserModel(
       firstName: json["first_name"] as String,
       lastName: json["last_name"] as String,
@@ -26,10 +26,10 @@ class MyUserModel extends MyUser {
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is MyUserModel &&
-      runtimeType == other.runtimeType &&
-      firstName == other.firstName &&
-      lastName == other.lastName &&
-      dateBirth == other.dateBirth;
+          runtimeType == other.runtimeType &&
+          firstName == other.firstName &&
+          lastName == other.lastName &&
+          dateBirth == other.dateBirth;
 
   @override
   int get hashCode => Object.hash(firstName, lastName, dateBirth);

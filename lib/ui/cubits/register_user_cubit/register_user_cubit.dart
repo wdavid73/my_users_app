@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_starter_kit/data/models/my_user_model.dart';
-import 'package:flutter_starter_kit/ui/blocs/blocs.dart';
-import 'package:flutter_starter_kit/ui/shared/inputs/inputs.dart';
+import 'package:my_users_app/data/models/my_user_model.dart';
+import 'package:my_users_app/ui/blocs/blocs.dart';
+import 'package:my_users_app/ui/shared/inputs/inputs.dart';
 import 'package:formz/formz.dart';
 
 part 'register_user_state.dart';

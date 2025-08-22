@@ -1,10 +1,10 @@
-import 'package:flutter_starter_kit/api/api.dart';
-import 'package:flutter_starter_kit/data/data.dart';
-import 'package:flutter_starter_kit/domain/repositories/repositories.dart';
-import 'package:flutter_starter_kit/domain/usecases/usecases.dart';
-import 'package:flutter_starter_kit/ui/blocs/blocs.dart';
-import 'package:flutter_starter_kit/ui/cubits/cubits.dart';
-import 'package:flutter_starter_kit/ui/shared/service/service.dart';
+import 'package:my_users_app/api/api.dart';
+import 'package:my_users_app/data/data.dart';
+import 'package:my_users_app/domain/repositories/repositories.dart';
+import 'package:my_users_app/domain/usecases/usecases.dart';
+import 'package:my_users_app/ui/blocs/blocs.dart';
+import 'package:my_users_app/ui/cubits/cubits.dart';
+import 'package:my_users_app/ui/shared/service/service.dart';
 import 'package:get_it/get_it.dart';
 
 final GetIt getIt = GetIt.instance;

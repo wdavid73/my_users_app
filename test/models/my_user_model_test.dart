@@ -1,4 +1,4 @@
-import 'package:flutter_starter_kit/data/models/my_user_model.dart';
+import 'package:my_users_app/data/models/my_user_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

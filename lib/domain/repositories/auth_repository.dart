@@ -1,4 +1,4 @@
-import 'package:flutter_starter_kit/api/api.dart';
+import 'package:my_users_app/api/api.dart';
 
 /// Defines the contract for authentication-related operations.
 ///

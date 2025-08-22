@@ -1,10 +1,10 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter_kit/app/dependency_injection.dart';
-import 'package:flutter_starter_kit/config/config.dart';
-import 'package:flutter_starter_kit/ui/cubits/register_user_cubit/register_user_cubit.dart';
-import 'package:flutter_starter_kit/ui/widgets/widgets.dart';
+import 'package:my_users_app/app/dependency_injection.dart';
+import 'package:my_users_app/config/config.dart';
+import 'package:my_users_app/ui/cubits/register_user_cubit/register_user_cubit.dart';
+import 'package:my_users_app/ui/widgets/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 

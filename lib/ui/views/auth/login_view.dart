@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_starter_kit/config/config.dart';
-import 'package:flutter_starter_kit/ui/shared/shared.dart';
-import 'package:flutter_starter_kit/ui/widgets/widgets.dart';
+import 'package:my_users_app/config/config.dart';
+import 'package:my_users_app/ui/shared/shared.dart';
+import 'package:my_users_app/ui/widgets/widgets.dart';
 import './widgets/form_sign_in.dart';
 import './widgets/wrapper_bloc_providers.dart';
 

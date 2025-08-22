@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_kit/ui/widgets/widgets.dart';
+import 'package:my_users_app/ui/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_starter_kit/config/config.dart';
-import 'package:flutter_starter_kit/ui/shared/shared.dart';
-import 'package:flutter_starter_kit/ui/screens/home/expanded_layout/home_screen_expanded_layout.dart';
-import 'package:flutter_starter_kit/ui/screens/home/medium_layout/home_screen_medium_layout.dart';
+import 'package:my_users_app/config/config.dart';
+import 'package:my_users_app/ui/shared/shared.dart';
+import 'package:my_users_app/ui/screens/home/expanded_layout/home_screen_expanded_layout.dart';
+import 'package:my_users_app/ui/screens/home/medium_layout/home_screen_medium_layout.dart';
 import './widgets/drawer_home.dart';
 
 class HomeScreen extends StatelessWidget {

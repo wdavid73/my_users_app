@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter_kit/data/models/address_model.dart';
-import 'package:flutter_starter_kit/ui/blocs/user/user_bloc.dart';
+import 'package:my_users_app/data/models/address_model.dart';
+import 'package:my_users_app/ui/blocs/user/user_bloc.dart';
 
 part 'manage_address_state.dart';
 

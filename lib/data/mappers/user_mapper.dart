@@ -1,4 +1,4 @@
-import 'package:flutter_starter_kit/data/models/user.dart';
+import 'package:my_users_app/data/models/user.dart';
 
 /// A utility class for mapping between JSON data and [UserModel] objects.
 ///
